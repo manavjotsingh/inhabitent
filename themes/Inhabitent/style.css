@@ -1,5 +1,5 @@
 /*!
-Theme Name: Inhabitent
+Theme Name: RED Starter Theme
 Theme URI: http://underscores.me/
 Author: RED Academy
 Author URI: http://www.redacademy.com
@@ -670,3 +670,8 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 /* Front page */
+.site-header {
+  height: 100vh; }
+
+body {
+  background-color: aqua; }
