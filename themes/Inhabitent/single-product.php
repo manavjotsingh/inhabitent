@@ -12,22 +12,25 @@ get_header(); ?>
 
 		<?php while ( have_posts() ) : the_post(); ?>
 			
+			<div class="single-shop-image">
+				<?php if (has_post_thumbnail()) : ?>
+				<?php the_post_thumbnail('large'); ?>
+				<?php endif; ?>
+			</div>
+			
+			<div class="single-shop-content">
+			<?php the_title('<h1 class="entry-title">', '</h1>'); ?>
 
-			<?php get_template_part( 'template-parts/content', 'single' ); ?>
+			<p class="price">$<?php the_field('price'); ?></p>
 
-			<?php the_post_navigation(); ?>
-			<p>$<?php the_field('price'); ?></p>
-			<?php
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
-			?>
+			<p class="content"><?php the_content(); ?></p>
+
+			</div>
 
 		<?php endwhile; // End of the loop. ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
+
 <?php get_footer(); ?>

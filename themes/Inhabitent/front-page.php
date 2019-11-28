@@ -76,5 +76,23 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
+<section class="adventures-hardcode">
+	<div class="adventures-left-big">
+		<h1>Getting Back to Nature in a Canoe</h1>
+		<a href="">Read More</a>
+					</div>
+	<div class="adventures-Top-right">
+		<h2>A Night with Friends at the Beach</h2>
+		<a href="">Read More</a>	 
+					</div>
+	<div class="adventures-bottom-right-a">
+		<h3>Taking in the View at Big Mountain</h3>
+		<a href="">Read More</a>
+	</div>
+	<div class="adventures-bottom-right-b">
+		<h3>Star-Gazing at the Night Sky</h3>
+		<a href="">Read More</a>
+	</div>
+</section>
 
 <?php get_footer(); ?>
