@@ -200,7 +200,6 @@
 .hfeed {
 
     .journal {
-        padding-top: 5rem;
         width: $base__width;
         margin: 0 auto;
         display: flex;
@@ -208,6 +207,9 @@
             width: 70%;
             height: auto;
             padding-right: 3.5rem;
+            border-right: 1px solid $colar__inhab-bordercolor;
+            padding-top: 5rem;
+
             .post-container{
                 .entry-header{
                     position: relative;
@@ -245,7 +247,7 @@
                     
                 }
                 .inhabitent-button-wrap{
-                    margin-bottom: 10rem;
+                    margin-bottom: 3rem;
                 }
                 .inhabitent-button{
                     border: 1px solid black;
@@ -254,12 +256,124 @@
                 }    
             }
         }
-        .widget-area{
-            width: 30%;
-            padding-left: 3.5rem;
-        }
+        
         
     }
     
 }
 
+.widget-area{
+    width: 30%;
+    padding-left: 3.5rem;
+    padding-top: 5rem;
+
+    .widget_archive{
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+    }
+    .widget_custom_html{
+        .widget-title{
+            margin-top: 0;
+        }
+        a {
+            margin-left: .5rem;
+        }
+    }
+    .day-of-week{
+        font-weight: bold;
+    }
+}
+
+.page-id-87 {
+    .content-area{
+        width: $base__width;
+        margin: 0 auto;
+        display: flex;
+        .site-main {
+            width: 70%;
+            height: auto;
+            padding-right: 3.5rem;
+            border-right: 1px solid $colar__inhab-bordercolor;
+            padding-top: 5rem;
+            .entry-title {
+                margin-top: 0;
+                font-size: $font__size * 2.4;
+                font-family: $font__secondary;
+                text-transform: uppercase;
+            }
+            h2 {
+                text-align: left;
+                font-family: $font__secondary;
+                text-transform: uppercase;
+                font-size: $font__size * 2;
+                color: #2f1339;;
+            }
+            p {
+                margin-bottom: 3rem;
+            }
+        }
+    }
+}
+
+.single-post {
+    .content-area{
+        width: $base__width;
+        margin: 0 auto;
+        display: flex;
+        .site-main {
+            width: 70%;
+            height: auto;
+            padding-right: 3.5rem;
+            border-right: 1px solid $colar__inhab-bordercolor;
+            padding-top: 5rem;
+            .navigation{
+                display: none;
+            }
+            .type-post{
+                .entry-header{
+                    position: relative;
+                    max-width: 100%;
+                    display: block;
+                    img {
+                        object-fit: cover;
+                        width: 100%;
+                        height: 100%;
+                    }
+                    .entry-title{
+                        position: absolute;
+                        background-color: $color__inhab-green;
+                        left: 0;
+                        top: 0;
+                        padding: .75rem 1.5rem;
+                        font-size: $font__size * 2;
+                        max-width: 75%;
+                        color: $color__background-screen;
+                        
+                    }
+                    .entry-meta{
+                        position: absolute;
+                        background-color: $color__inhab-green;
+                        color: $color__background-screen;
+                        bottom: 0;
+                        right: 0;     
+                        font-family: $font__secondary;
+                        padding: 8px 1.5rem;
+                        a {
+                        color: $color__background-screen;
+                        }
+
+                    }
+                }
+                .entry-footer{
+                    text-transform: uppercase;
+                    .tags-links{
+                        margin-left: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}

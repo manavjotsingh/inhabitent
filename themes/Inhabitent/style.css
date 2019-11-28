@@ -317,10 +317,6 @@ hr {
   height: 1px;
   margin-bottom: 1.5rem; }
 
-ul,
-ol {
-  margin: 0 0 1.5rem 3rem; }
-
 ul {
   list-style: disc; }
 
@@ -884,7 +880,6 @@ object {
     font-size: 19.2px; }
 
 .hfeed .journal {
-  padding-top: 5rem;
   width: 1120px;
   margin: 0 auto;
   display: -webkit-box;
@@ -893,7 +888,9 @@ object {
   .hfeed .journal .site-main {
     width: 70%;
     height: auto;
-    padding-right: 3.5rem; }
+    padding-right: 3.5rem;
+    border-right: 1px solid #e1e1e1;
+    padding-top: 5rem; }
     .hfeed .journal .site-main .post-container .entry-header {
       position: relative;
       max-width: 100%;
@@ -922,14 +919,99 @@ object {
         font-family: "Novecento Sans Web", Arial, Helvetica, sans-serif;
         padding: 8px 1.5rem; }
     .hfeed .journal .site-main .post-container .inhabitent-button-wrap {
-      margin-bottom: 10rem; }
+      margin-bottom: 3rem; }
     .hfeed .journal .site-main .post-container .inhabitent-button {
       border: 1px solid black;
       color: black;
       padding: .75rem 1.5rem; }
-  .hfeed .journal .widget-area {
-    width: 30%;
-    padding-left: 3.5rem; }
+
+.widget-area {
+  width: 30%;
+  padding-left: 3.5rem;
+  padding-top: 5rem; }
+  .widget-area .widget_archive ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0; }
+  .widget-area .widget_custom_html .widget-title {
+    margin-top: 0; }
+  .widget-area .widget_custom_html a {
+    margin-left: .5rem; }
+  .widget-area .day-of-week {
+    font-weight: bold; }
+
+.page-id-87 .content-area {
+  width: 1120px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .page-id-87 .content-area .site-main {
+    width: 70%;
+    height: auto;
+    padding-right: 3.5rem;
+    border-right: 1px solid #e1e1e1;
+    padding-top: 5rem; }
+    .page-id-87 .content-area .site-main .entry-title {
+      margin-top: 0;
+      font-size: 38.4px;
+      font-family: "Novecento Sans Web", Arial, Helvetica, sans-serif;
+      text-transform: uppercase; }
+    .page-id-87 .content-area .site-main h2 {
+      text-align: left;
+      font-family: "Novecento Sans Web", Arial, Helvetica, sans-serif;
+      text-transform: uppercase;
+      font-size: 32px;
+      color: #2f1339; }
+    .page-id-87 .content-area .site-main p {
+      margin-bottom: 3rem; }
+
+.single-post .content-area {
+  width: 1120px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .single-post .content-area .site-main {
+    width: 70%;
+    height: auto;
+    padding-right: 3.5rem;
+    border-right: 1px solid #e1e1e1;
+    padding-top: 5rem; }
+    .single-post .content-area .site-main .navigation {
+      display: none; }
+    .single-post .content-area .site-main .type-post .entry-header {
+      position: relative;
+      max-width: 100%;
+      display: block; }
+      .single-post .content-area .site-main .type-post .entry-header img {
+        -o-object-fit: cover;
+           object-fit: cover;
+        width: 100%;
+        height: 100%; }
+      .single-post .content-area .site-main .type-post .entry-header .entry-title {
+        position: absolute;
+        background-color: #248A83;
+        left: 0;
+        top: 0;
+        padding: .75rem 1.5rem;
+        font-size: 32px;
+        max-width: 75%;
+        color: #f1f1f1; }
+      .single-post .content-area .site-main .type-post .entry-header .entry-meta {
+        position: absolute;
+        background-color: #248A83;
+        color: #f1f1f1;
+        bottom: 0;
+        right: 0;
+        font-family: "Novecento Sans Web", Arial, Helvetica, sans-serif;
+        padding: 8px 1.5rem; }
+        .single-post .content-area .site-main .type-post .entry-header .entry-meta a {
+          color: #f1f1f1; }
+    .single-post .content-area .site-main .type-post .entry-footer {
+      text-transform: uppercase; }
+      .single-post .content-area .site-main .type-post .entry-footer .tags-links {
+        margin-left: 1rem; }
 
 .footer {
   width: 100%;

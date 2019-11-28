@@ -22,7 +22,7 @@ get_header(); ?>
 
 				<article class="post-container">
 					<?php get_template_part('template-parts/content'); ?>
-					<p>
+					<p class="inhabitent-button-wrap">
 					<a class="inhabitent-button" href="<?= get_permalink(); ?>">READ MORE <i class="fas fa-long-arrow-alt-right"></i></a> </p>
 				</article>
 
