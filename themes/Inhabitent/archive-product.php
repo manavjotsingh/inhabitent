@@ -47,7 +47,7 @@ get_header(); ?>
                             <?php the_post_thumbnail('full'); ?>
                         </a>
                     </div>
-                    <div class="intem-info">
+                    <div class="item-info">
                         <div class="dots-stying">
                             <span class="item-title"><?php the_title(); ?></span>
                         </div>

@@ -111,13 +111,23 @@ html {
     .product-item{
         border: 1px solid $colar__inhab-bordercolor;
         .item-image-container{
-            height: 250px;
             background-color: $colar__inhab-bordercolor;
-            .img {
-                object-fit: cover;
-
+            .item-image-link{
+                .wp-post-image {
+                    height: 250px;
+                    object-fit: cover;
+                }
             }
-
         } 
+        .item-info{
+            padding: 1rem;
+            .dots-stying{
+                display: inline;
+            }
+            .item-price{
+                display: inline;
+                float: right;
+            }
+        }
     }
 }

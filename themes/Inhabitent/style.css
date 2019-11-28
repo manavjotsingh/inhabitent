@@ -826,11 +826,18 @@ html {
   .product-grid-display .product-item {
     border: 1px solid #e1e1e1; }
     .product-grid-display .product-item .item-image-container {
-      height: 250px;
       background-color: #e1e1e1; }
-      .product-grid-display .product-item .item-image-container .img {
+      .product-grid-display .product-item .item-image-container .item-image-link .wp-post-image {
+        height: 250px;
         -o-object-fit: cover;
            object-fit: cover; }
+    .product-grid-display .product-item .item-info {
+      padding: 1rem; }
+      .product-grid-display .product-item .item-info .dots-stying {
+        display: inline; }
+      .product-grid-display .product-item .item-info .item-price {
+        display: inline;
+        float: right; }
 
 .footer {
   width: 100%;
