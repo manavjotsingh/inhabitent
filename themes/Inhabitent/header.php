@@ -29,7 +29,7 @@
 		<div id="page" class="hfeed site">
 			<a class="skip-link screen-reader-text" href="#content"><?php echo esc_html( 'Skip to content' ); ?></a>
 
-			<header id="masthead" class="site-header" role="banner" style="background-image: url('<?php echo $feature ?>');">
+			<header id="masthead" class="site-header" role="banner" >
 				<div class="site-branding">
 					<h1 class="site-title screen-reader-text"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 					<p class="site-description"><?php bloginfo( 'description' ); ?></p>
@@ -39,6 +39,25 @@
 					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php echo esc_html( 'Primary Menu' ); ?></button>
 					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 				</nav><!-- #site-navigation -->
+				<?php // check if the page has a page Thumbnail assigned to it.
+		if (has_post_thumbnail()) { ?>
+
+			<?php if (is_page('front-page')) { ?>
+
+				<div class=" page-feat-image header-feat-image" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url(<?= $feature ?>);">
+					<img class="inhabitent-text-logo" src="<?php echo get_template_directory_uri() ?>/images/logos/inhabitent-logo-full.svg" alt="<?php echo $term->name; ?>" />
+				</div>
+			<?php } elseif (is_page()) { ?>
+
+				<div class="page-feat-image header-feat-image" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url(<?= $feature ?>);">
+					<h1 class="page-feature-image-title"><?php the_title(); ?></h1>
+				</div>
+			<?php } elseif (is_singular('adventure')) { ?>
+
+				<div class="page-feat-image header-feat-image" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url(<?= $feature ?>);">
+				</div>
+		<?php }
+		} ?>
 			</header><!-- #masthead -->
 
 			<div id="content" class="site-content">

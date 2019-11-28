@@ -127,8 +127,8 @@ class Tent_biz_hours extends WP_Widget {
 
 		$instance['title'] = strip_tags( $new_instance['title'] );
 		$instance['monday_friday'] = strip_tags( $new_instance['monday_friday'] );
-		$instance['sunday'] = strip_tags( $new_instance['sunday'] );
 		$instance['saturday'] = strip_tags( $new_instance['saturday'] );
+		$instance['sunday'] = strip_tags( $new_instance['sunday'] );
 
 		return $instance;
 
@@ -154,8 +154,8 @@ class Tent_biz_hours extends WP_Widget {
 
 		$title = strip_tags( $instance['title'] );
 		$monday_friday = strip_tags( $instance['monday_friday'] );
-		$sunday = strip_tags( $instance['sunday'] );
 		$saturday = strip_tags( $instance['saturday'] );
+		$sunday = strip_tags( $instance['sunday'] );
 
 
 		// Display the admin form

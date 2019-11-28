@@ -1,6 +1,56 @@
 // Styling for the header.php
 
-.site-header {
-    height: 100vh;
-
+// stying for the feat image 
+.home, .page-id-83 {
+    .page-feat-image {
+        height: 100vh;
+        width: 100vw;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 4.5rem;
+        position: absolute;
+        z-index: -1;
+      }
+      .site-header{
+      position: relative;
+      top: 0;
+      min-width: 100%;
+      height: 100vh;
+      a {
+        color: $color__background-body;
+        }
+        }
 }
+
+
+  // for the nav 
+
+  .site-header{
+      position: relative;
+      top: 0;
+      min-width: 100%;
+      
+      .menu-main-menus-container {
+        margin-left: auto;
+        margin-right: auto;
+        width: $base__width;
+          .nav-menu{
+              display:flex;
+              justify-content: flex-end;
+              text-transform: uppercase;
+            .menu-item {
+                padding: 0 0 0 1.5rem;
+            }
+          }
+          
+      }
+  }
+
+ /* .page-feature-image-title {
+    color: $main_background;
+    font-size: $base__space-unit * 2.5;
+  } */

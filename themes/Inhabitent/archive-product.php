@@ -7,37 +7,63 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+<div id="primary" class="products-content-area-wrapper ">
+    <main id="main" class="site-main" role="main">
 
-		<?php if ( have_posts() ) : ?>
+        <div class="product-type-container">
+            <h2 class="shop-page-title">Shop Stuff</h2>
+			<!-- getting the 4 terms -->
+			
+			<?php
+            $terms = get_terms(array(
+                'taxonomy' => 'product_type',
+                'hide_empty' => 0,
+            ));
+            if (!empty($terms) && !is_wp_error($terms)) :
+                ?>
+                <div class="product-term">
+                    <?php foreach ($terms as $term) : ?>
+                        <a href="<?php echo get_term_link($term); ?>" class=""><?php echo $term->name; ?></a>
+                    <?php endforeach; ?>
+                </div>
+            <?php endif; ?>
+		</div>
 
-			<header class="page-header">
-				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
-					the_archive_description( '<div class="taxonomy-description">', '</div>' );
-				?>
-			</header><!-- .page-header -->
+<!--  product loop -->
+        <?php
+        $args = [
+            'post_type' => 'product',
+            'order' => 'ASC',
+            'posts_per_page' => 16
+        ];
+        $inhabitent_products = new WP_query($args); 
+        ?>
+        <div class="product-grid-display">
+            <?php while ($inhabitent_products->have_posts()) : ($inhabitent_products->the_post()); ?>
 
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+                <div class="product-item">
+                    <div class="item-image-container">
+                        <a class="item-image-link" href="<?php the_permalink(); ?>">
+                            <?php the_post_thumbnail('full'); ?>
+                        </a>
+                    </div>
+                    <div class="intem-info">
+                        <div class="dots-stying">
+                            <span class="item-title"><?php the_title(); ?></span>
+                        </div>
 
-				<?php
-					get_template_part( 'template-parts/content' );
-				?>
+                        <div class="item-price">&#36;<?php the_field('price'); ?></div>
 
-			<?php endwhile; ?>
+                    </div>
 
-			<?php the_posts_navigation(); ?>
+                </div>
+            <?php endwhile;
+            wp_reset_postdata(); ?>
+        </div>
 
-		<?php else : ?>
-
-			<?php get_template_part( 'template-parts/content', 'none' ); ?>
-
-		<?php endif; ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
+
 <?php get_footer(); ?>

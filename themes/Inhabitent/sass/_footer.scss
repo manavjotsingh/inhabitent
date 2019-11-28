@@ -1,0 +1,44 @@
+// footer css
+.footer {
+    width: 100%;
+    background-image: url("../../images/dark-wood.png");
+    color: $color__background-body;
+    height: auto;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+
+    h3 {
+        color: $color__inhab-orange;
+    }
+
+    .footer-content-wraper {
+        width: $base__width;
+        height: auto;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+
+        .footer-contact {
+            flex: 0 1 25%;
+        }
+        .footer-hours {
+            flex: 0 1 25%;
+                .bold-text{
+                    font-weight: bold;
+                }
+        }
+        .footer-logo {
+            flex: 0 1 50%;
+            text-align: right;
+            embed {
+                width: 280px;
+                height: 50px;
+            }
+        }
+        
+}
+}
+
+.footer-copyright{
+    text-align: center;
+}

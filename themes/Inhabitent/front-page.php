@@ -6,9 +6,31 @@
  */
 
 get_header(); ?>
+<section class="product-section-container">
+    <h2 class="front-page-title">Shop Stuff</h2>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+        <?php
+            $terms = get_terms( array(
+                   'taxonomy' => 'product_type',
+                   'hide_empty' => 0,
+               ) );
+               if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) :
+            ?>
+
+               <div class="product-block-wrapper">
+                  <?php foreach ( $terms as $term ) : ?>
+                <div class="product-block-single">
+                     <img src="<?php echo get_template_directory_uri() . '/images/product-type-icons/' . $term->slug; ?>.svg" alt="<?php echo $term->name; ?>" />
+                     <p class="product-desc-text"><?php echo $term->description; ?></p>
+                     <p><a href="<?php echo get_term_link( $term ); ?>" class="btn"><?php echo $term->name; ?> Stuff</a></p>
+                  </div>
+                <?php endforeach; ?>
+            </div>
+        <?php endif; ?>
+    </section>
+
+	<div id="primary" class="journal-content-area">
+		<main id="main" class="journal-container" role="main">
 
 					<?php
                         $args = array(
@@ -33,12 +55,12 @@ get_header(); ?>
 										<?php echo " / "; comments_number();?>
 									</span>
 								</span>
-								<h3>
+								<h3 class="front-page-journal-title">
                                 	<a href=<?php the_permalink(); ?>>
                                     <?php the_title(); ?>
                                 	</a>
 								</h3>
-								<a href=<?php the_permalink() ?>>Read Entry</a>
+								<a href=<?php the_permalink() ?> class="front-page-journal-btn">Read Entry</a>
 							</div>
 						</li>
 					<?php endwhile; ?>
@@ -54,5 +76,5 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
+
 <?php get_footer(); ?>

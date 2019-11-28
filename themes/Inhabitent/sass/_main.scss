@@ -1,0 +1,123 @@
+html {
+    margin: 0 !important 
+}
+
+// shop stuff on frontpage
+
+.product-section-container {
+	text-align: center;
+    width: 100%;
+    padding-bottom: 4.5rem;
+    
+
+	.product-block-wrapper {
+		display: flex;
+        flex-direction: row;
+		width: $base__width;
+        margin: auto;
+        justify-content: space-between;
+		.product-block-single {
+            
+
+            width: 20rem;
+			height: 16rem;
+			padding: 0.75em;
+            flex: 0 1 23.5%;
+			border: 1px solid $colar__inhab-bordercolor;
+            border-top-width: .5rem;           
+                &:hover{
+                    border: 1px solid $color__inhab-orange;
+                    border-top-width: .5rem;  
+                }
+			a {
+                text-decoration: none;
+                background-color: $color__inhab-green;
+                color: $color__background-body;
+                padding: .75rem 1.5rem;
+            }
+            
+            img {
+                height: 4.375rem; 
+                width: 4.375rem;
+            }
+		}	
+	}
+}
+
+
+// fronst page journel css
+
+.journal-content-area {
+    text-align: center;
+    width: $base__width;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 4.5rem;
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+
+        li {
+            flex: 0 1 32%;
+            border: 1px solid $colar__inhab-bordercolor;
+            position: relative;
+            img {
+                border-bottom: 3px solid $colar__inhab-bordercolor;
+            }
+            div {
+                padding: .75rem;
+                // display: flex;
+                flex-direction: column;
+                align-items: baseline;
+                justify-content: space-between;
+                text-align: left;
+                .front-page-journal-title {
+                    font-size: $font__size * 1.4;
+                    margin-bottom: 3.75rem;
+                    margin-top: 0;
+                    font-family: $font__secondary,sans-serif;
+                }
+                .front-page-journal-btn {
+                    color: $colar__inhab-bordercolor;
+                    border: 1px solid $colar__inhab-bordercolor;
+                    position: absolute;
+                    bottom: .75rem;
+                    left: .75rem;
+                    padding: .75rem 1.5rem;
+                }
+        
+            }
+            
+        }
+    }
+}
+
+// Shops CSS
+
+.product-grid-display {
+    margin-left: auto;
+    margin-right: auto;
+    width: $base__width;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(4, auto);
+    grid-gap: 1.5rem;
+    padding: 3rem 0;
+    .product-item{
+        border: 1px solid $colar__inhab-bordercolor;
+        .item-image-container{
+            height: 250px;
+            background-color: $colar__inhab-bordercolor;
+            .img {
+                object-fit: cover;
+
+            }
+
+        } 
+    }
+}
