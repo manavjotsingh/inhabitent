@@ -338,12 +338,6 @@ dt {
 dd {
   margin: 0 1.5rem 1.5rem; }
 
-img {
-  height: auto;
-  /* Make sure images are scaled correctly. */
-  max-width: 100%;
-  /* Adhere to container width. */ }
-
 table {
   margin: 0 0 1.5rem;
   width: 100%; }
@@ -674,9 +668,7 @@ object {
   padding: .5rem 0; }
 
 .site-header {
-  position: relative;
-  top: 0;
-  min-width: 100%; }
+  width: 100%; }
   .site-header .menu-main-menus-container {
     margin-left: auto;
     margin-right: auto;
@@ -721,9 +713,6 @@ object {
   height: 100vh; }
   .home .site-header a, .page-id-83 .site-header a {
     color: #fff; }
-
-html {
-  margin: 0 !important; }
 
 .product-section-container {
   text-align: center;
@@ -894,11 +883,58 @@ html {
   .page-id-83 .about-article p {
     font-size: 19.2px; }
 
+.hfeed .journal {
+  padding-top: 5rem;
+  width: 1120px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .hfeed .journal .site-main {
+    width: 70%;
+    height: auto;
+    padding-right: 3.5rem; }
+    .hfeed .journal .site-main .post-container .entry-header {
+      position: relative;
+      max-width: 100%;
+      display: block; }
+      .hfeed .journal .site-main .post-container .entry-header img {
+        -o-object-fit: cover;
+           object-fit: cover;
+        width: 100%;
+        height: 100%; }
+      .hfeed .journal .site-main .post-container .entry-header .entry-title {
+        position: absolute;
+        background-color: #248A83;
+        left: 0;
+        top: 0;
+        padding: .75rem 1.5rem;
+        font-size: 32px;
+        max-width: 75%; }
+        .hfeed .journal .site-main .post-container .entry-header .entry-title a {
+          color: #f1f1f1; }
+      .hfeed .journal .site-main .post-container .entry-header .entry-meta {
+        position: absolute;
+        background-color: #248A83;
+        color: #f1f1f1;
+        bottom: 0;
+        right: 0;
+        font-family: "Novecento Sans Web", Arial, Helvetica, sans-serif;
+        padding: 8px 1.5rem; }
+    .hfeed .journal .site-main .post-container .inhabitent-button-wrap {
+      margin-bottom: 10rem; }
+    .hfeed .journal .site-main .post-container .inhabitent-button {
+      border: 1px solid black;
+      color: black;
+      padding: .75rem 1.5rem; }
+  .hfeed .journal .widget-area {
+    width: 30%;
+    padding-left: 3.5rem; }
+
 .footer {
   width: 100%;
   background-image: url("../../images/dark-wood.png");
   color: #fff;
-  height: auto;
   padding-top: 3rem;
   padding-bottom: 1rem; }
   .footer h3 {
