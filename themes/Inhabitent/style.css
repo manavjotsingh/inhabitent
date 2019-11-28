@@ -833,11 +833,18 @@ html {
            object-fit: cover; }
     .product-grid-display .product-item .item-info {
       padding: 1rem; }
-      .product-grid-display .product-item .item-info .dots-stying {
-        display: inline; }
+      .product-grid-display .product-item .item-info .item-title {
+        display: inline;
+        background: #fff; }
+        .product-grid-display .product-item .item-info .item-title:before {
+          float: left;
+          width: 0;
+          white-space: nowrap;
+          content: '...................................................'; }
       .product-grid-display .product-item .item-info .item-price {
         display: inline;
-        float: right; }
+        float: right;
+        background: #fff; }
 
 .footer {
   width: 100%;

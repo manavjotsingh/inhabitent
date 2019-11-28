@@ -121,12 +121,22 @@ html {
         } 
         .item-info{
             padding: 1rem;
-            .dots-stying{
+            .item-title{
                 display: inline;
-            }
+                background: $color__background-body;
+                &:before {
+                    float: left;
+                    width: 0;
+                    white-space: nowrap;
+                    content: '...................................................';
+                  }
+                }
+            
             .item-price{
                 display: inline;
                 float: right;
+                background: $color__background-body;
+                
             }
         }
     }

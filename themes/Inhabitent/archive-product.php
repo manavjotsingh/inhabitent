@@ -48,8 +48,8 @@ get_header(); ?>
                         </a>
                     </div>
                     <div class="item-info">
-                        <div class="dots-stying">
-                            <span class="item-title"><?php the_title(); ?></span>
+                        <div class="item-title">
+                            <?php the_title(); ?>
                         </div>
 
                         <div class="item-price">&#36;<?php the_field('price'); ?></div>
