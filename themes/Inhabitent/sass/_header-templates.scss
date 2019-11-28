@@ -1,34 +1,14 @@
 // Styling for the header.php
 
-// stying for the feat image 
-.home, .page-id-83 {
-    .page-feat-image {
-        height: 100vh;
-        width: 100vw;
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 4.5rem;
-        position: absolute;
-        z-index: -1;
-      }
-      .site-header{
-      position: relative;
-      top: 0;
-      min-width: 100%;
-      height: 100vh;
-      a {
-        color: $color__background-body;
-        }
-        }
-}
+
+
 
 
   // for the nav 
-
+.main-navigation{
+    border-bottom: 1px solid $colar__inhab-bordercolor;
+    padding: .5rem 0;
+}
   .site-header{
       position: relative;
       top: 0;
@@ -49,8 +29,32 @@
           
       }
   }
+// stying for the feat image 
+.home, .page-id-83 {
+    .main-navigation{
+    border-bottom: none;
 
- /* .page-feature-image-title {
-    color: $main_background;
-    font-size: $base__space-unit * 2.5;
-  } */
+    }
+    .page-feat-image {
+        height: 100vh;
+        width: 100vw;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 4.5rem;
+        position: absolute;
+        z-index: -1;
+        }
+      .site-header{
+      position: relative;
+      top: 0;
+      min-width: 100%;
+      height: 100vh;
+      a {
+        color: $color__background-body;
+        }
+    }
+}
